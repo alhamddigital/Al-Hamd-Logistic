@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+}
+
+body, p, span, li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+.transportHeroSec {
+  background-image:
+   linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url("https://as2.ftcdn.net/v2/jpg/01/81/65/85/1000_F_181658575_6gz3Gx96iRndmBtXv2llVsGOGsfdT1AP.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.transportCalculation {
+  background-image: linear-gradient(
+      rgb(114, 133, 176, 0.7),
+      rgb(141, 148, 165, 0.7)
+    ),
+    url(https://vectorglobe.com/wp-content/uploads/2024/06/What-is-the-Difference-Between-Logistics-and-Transportation-1536x786.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.customShadow {
+  box-shadow: 0px 2px 8px 4px rgb(230, 229, 229);
+}
+
+.contactSection{
+  background-image: linear-gradient(rgb(66,61,143,0.8), rgb(66,61,143,0.8)), url('https://as2.ftcdn.net/v2/jpg/01/81/65/85/1000_F_181658575_6gz3Gx96iRndmBtXv2llVsGOGsfdT1AP.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
