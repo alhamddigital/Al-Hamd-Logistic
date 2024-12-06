@@ -1,22 +1,22 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import { useDispatch } from 'react-redux';
-// import { transportAbout } from '../Redux/Slice';
+import { useDispatch } from 'react-redux';
+import { transportAbout } from '../Redux/Slice';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
     const left = useRef()
     const right = useRef()
     const aboutRef = useRef()
 
-    // useEffect(() => {
-    //     window.addEventListener("scroll", () => {
-    //         dispatch(transportAbout(aboutRef.current.getBoundingClientRect().top))
-    //     })
-    // }, [])
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            dispatch(transportAbout(aboutRef.current.getBoundingClientRect().top))
+        })
+    }, [])
 
     useEffect(() => {
 
@@ -54,7 +54,7 @@ const About = () => {
 
     return (
         <>
-            <div ref={aboutRef} id='transportAbout' className='w-full min-h-screen px-2 lg:px-[90px] py-9 lg:py-[40px] overflow-hidden'>
+            <div ref={aboutRef} id='about' className='w-full min-h-screen px-2 lg:px-[90px] py-9 lg:py-[40px] overflow-hidden'>
                 <h1 className='text-[rgb(255,94,20)] text-3xl text-center font-[600]'>About Us</h1>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-[60px] mt-5 lg:mt-9'>

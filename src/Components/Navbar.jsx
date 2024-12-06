@@ -1,49 +1,48 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { HiOutlineBars3 } from 'react-icons/hi2'
-// import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { RxCross2 } from 'react-icons/rx'
-import { IoMdHome } from "react-icons/io";
 
 const Navbar = () => {
-//   const {
-//     transportHomeTop,
-//     transportServicesTop,
-//     transportAboutTop,
-//     transportExploreTop,
-//     transportContactTop
-//   } = useSelector(state => state.company)
+  const {
+    transportHomeTop,
+    transportServicesTop,
+    transportAboutTop,
+    transportExploreTop,
+    transportContactTop
+  } = useSelector(state => state.logistic)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeLink, setactiveLink] = useState('home')
   const [checkSidebar, setSidebar] = useState(false)
 
-//   useEffect(() => {
-//     if (transportHomeTop === 0 || transportHomeTop < window.innerHeight) {
-//       setactiveLink('home')
-//     }
+  useEffect(() => {
+    if (transportHomeTop === 0 || transportHomeTop < window.innerHeight) {
+      setactiveLink('home')
+    }
 
-//     if (transportServicesTop < window.innerHeight) {
-//       setactiveLink('services')
-//     }
+    if (transportServicesTop < window.innerHeight) {
+      setactiveLink('services')
+    }
 
-//     if (transportAboutTop < window.innerHeight) {
-//       setactiveLink('about')
-//     }
+    if (transportAboutTop < window.innerHeight) {
+      setactiveLink('about')
+    }
 
-//     if (transportExploreTop < window.innerHeight) {
-//       setactiveLink('explore')
-//     }
+    if (transportExploreTop < window.innerHeight) {
+      setactiveLink('explore')
+    }
 
-//     if (transportContactTop < window.innerHeight) {
-//       setactiveLink('contact')
-//     }
-//   }, [
-//     transportHomeTop,
-//     transportServicesTop,
-//     transportAboutTop,
-//     transportExploreTop,
-//     transportContactTop
-//   ])
+    if (transportContactTop < window.innerHeight) {
+      setactiveLink('contact')
+    }
+  }, [
+    transportHomeTop,
+    transportServicesTop,
+    transportAboutTop,
+    transportExploreTop,
+    transportContactTop
+  ])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,15 +80,6 @@ const Navbar = () => {
     }
   }, [checkSidebar])
 
-  useEffect(()=>{
-    if(checkSidebar){
-      document.body.style.overflow="hidden"
-    }
-    else{
-      document.body.style.overflow="auto"
-    }
-  },[checkSidebar])
-
 //   console.log(transportHomeTop, 'transportHomeTop')
 //   console.log(transportContactTop, 'transposrtContactTop')
   console.log(activeLink)
@@ -103,7 +93,7 @@ const Navbar = () => {
       >
         <div className='flex items-center'>
           <div className='logosAnimation w-[80px] sm:w-[80px]'>
-            <a href='/transportHome'>
+            <a href='/'>
               <img
                 className='w-full h-full cursor-pointer'
                 src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/logoTransport_gwchby.png"

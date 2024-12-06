@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
-// import { useDispatch } from 'react-redux';
-// import { constructionContact } from '../Redux/Slice';
+import { useDispatch } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { transportContact } from '../Redux/Slice';
 
 const Contact = () => {
     const formRef = useRef();
     const contactRef = useRef();
     const [watsapp, setwatsapp] = useState(false);
     const [whatsAppMessage, setWhatsAppMessage] = useState("");
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -22,11 +22,11 @@ const Contact = () => {
         })
     }, [])
 
-    // useEffect(() => {
-    //     window.addEventListener("scroll", () => {
-    //         dispatch(constructionContact(contactRef.current.getBoundingClientRect().top));
-    //     });
-    // }, []);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            dispatch(transportContact(contactRef.current.getBoundingClientRect().top));
+        });
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -68,7 +68,7 @@ const Contact = () => {
     return (
         <>
             <ToastContainer />
-            <div id='consContact' ref={contactRef} className='bg-gray-200 contactSection'>
+            <div id='contact' ref={contactRef} className='bg-gray-200 contactSection'>
                 <section className="">
                     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white dark:text-white">Contact Us</h2>

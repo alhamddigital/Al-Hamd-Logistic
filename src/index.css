@@ -22,8 +22,8 @@ html {
 
 .transportHeroSec {
   background-image:
-   linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
-    url("https://as2.ftcdn.net/v2/jpg/01/81/65/85/1000_F_181658575_6gz3Gx96iRndmBtXv2llVsGOGsfdT1AP.jpg");
+   linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url("https://res.cloudinary.com/djpvajewe/image/upload/v1733469584/storage_warehouse_fvpc4h.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,7 +34,7 @@ html {
       rgb(114, 133, 176, 0.7),
       rgb(141, 148, 165, 0.7)
     ),
-    url(https://vectorglobe.com/wp-content/uploads/2024/06/What-is-the-Difference-Between-Logistics-and-Transportation-1536x786.jpg);
+    url("https://vectorglobe.com/wp-content/uploads/2024/06/What-is-the-Difference-Between-Logistics-and-Transportation-1536x786.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

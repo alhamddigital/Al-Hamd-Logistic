@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { useDispatch } from "react-redux";
-// import { transportServices } from "../Redux/Slice";
+import { useDispatch } from "react-redux";
+import { transportServices } from "../Redux/Slice";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const card1 = useRef();
   const card2 = useRef();
   const card3 = useRef();
@@ -17,13 +17,13 @@ const Services = () => {
 
   const transportRef = useRef();
 
-//   useEffect(() => {
-//     window.addEventListener("scroll", () => {
-//       dispatch(
-//         transportServices(transportRef.current.getBoundingClientRect().top)
-//       );
-//     });
-//   }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      dispatch(
+        transportServices(transportRef.current.getBoundingClientRect().top)
+      );
+    });
+  }, []);
 
   useEffect(() => {
     if(window.innerWidth >= 1024){
@@ -207,7 +207,7 @@ const Services = () => {
     <>
       <div
         ref={transportRef}
-        id="transportServices"
+        id="services"
         className="w-full min-h-screen py-9 overflow-hidden"
       >
         <h1 className="text-center text-3xl font-[600]">Our Services</h1>
@@ -217,8 +217,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-1 gap-x-9 gap-y-[80px] py-[60px] lg:py-[70px] px-3 lg:px-[90px]">
           {array.map((e, i) => {
             return (
-              <>
-                <div ref={e.reference} className="customShadow group bg-white cursor-pointer flex justify-center items-center flex-col px-2 lg:px-4 pb-[120px] rounded-2xl border border-[rgb(223,223,223)]">
+                <div key={i} ref={e.reference} className="customShadow group bg-white cursor-pointer flex justify-center items-center flex-col px-2 lg:px-4 pb-[120px] rounded-2xl border border-[rgb(223,223,223)]">
                   <div className="w-[120px] h-[120px] duration-1000 group-hover:rotate-[360deg] rounded-full p-5 bg-white -mt-[60px]">
                     <img className="w-full h-full rounded-full object-cover" src={e.image} alt=""/>
                   </div>
@@ -229,7 +228,6 @@ const Services = () => {
                   </div>
                   <p className="text-center mt-9 leading-7">{e.description}</p>
                 </div>
-              </>
             );
           })}
         </div>
