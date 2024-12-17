@@ -27,6 +27,8 @@ const Explore = () => {
   }, []);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)"); 
+    if(mediaQuery.matches){
     gsap.fromTo(
       card1.current,
       { x: "-120%", y: "100%" }, // Start from the left side (offscreen)
@@ -77,6 +79,7 @@ const Explore = () => {
           markers: false,
         },
       }
+    
     );
 
     gsap.fromTo(
@@ -130,13 +133,14 @@ const Explore = () => {
         },
       }
     );
+  }
   }, []);
 
   const array = [
     {
       image:
         "https://res.cloudinary.com/djpvajewe/image/upload/v1733469584/storage_warehouse_fvpc4h.jpg",
-      name: "Storage Services",
+      name: "Warehousing Services",
       description: "Optimized space utilization for efficient stock management, ensuring safety, organization, and maximum storage capacity..",
       reference: card1,
     },
@@ -149,28 +153,28 @@ const Explore = () => {
     },
     {
       image:
-        "https://www.mechanicalpower.net/wp-content/uploads/2021/06/Material-Movement-warehouse.jpg",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1733723249/forklist1_dlb0et.jpg",
       name: "Material Handling",
       description: "Efficient material movement using forklifts, cranes, conveyors, ensuring safety and productivity in operations.",
       reference: card3,
     },
     {
       image:
-      "https://res.cloudinary.com/djpvajewe/image/upload/v1733471825/vehicles_pk9nmb.jpg",
+      "https://res.cloudinary.com/djpvajewe/image/upload/v1734422922/WhatsApp_Image_2024-12-17_at_11.27.30_wiawht.jpg",
       name: "Transport Solutions",
       description: "Comprehensive transport solutions offering efficient, secure, and timely delivery for both domestic and international shipments",
       reference: card4,
     },
     {
       image:
-      "https://images.squarespace-cdn.com/content/v1/5d0538bccfc0ed0001ec9607/1608501440882-Y9FAW7FUPSV0ZODZN5MZ/176.jpg",
+      "https://res.cloudinary.com/djpvajewe/image/upload/v1734422943/WhatsApp_Image_2024-12-17_at_12.04.21_fmuy44.jpg",
       name: "Security aur Monitoring",
       description: "24/7 security and monitoring with CCTV, access control, and advanced systems to protect inventory and assets",
       reference: card5,
     },
     {
       image:
-        "https://www.eaton.com/content/dam/eaton/products/services/1%20warehouse%20service.jpg",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1734423197/BEB14C12-7D0E-448B-9A04-5905847751EA_h82fsx.png",
       name: "Value-added Services",
       description: "Customized value-added services including labeling, packaging, assembly, and quality inspection to enhance product value and presentation",
       reference: card6,
@@ -181,10 +185,10 @@ const Explore = () => {
     <>
       <div
         ref={exploreRef}
-        id="transportExplore"
+        id="explore"
         className="w-full min-h-screen py-9 lg:py-[50px] bg-[rgb(245,245,245)] overflow-hidden"
       >
-        <h1 className="text-3xl font-[400] text-center">Explore Us</h1>
+        <h1 className="text-3xl font-[400] text-center">Our Services</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 mt-5 lg:mt-9 lg:px-[90px] gap-9">
           {array.map((e, i) => {
@@ -210,7 +214,7 @@ const Explore = () => {
                       <FaArrowRight />
                     </div>
                     <div className="group-hover:left-[26px] w-[120px] h-[35px] absolute top-0 -left-[190px] duration-500 rounded-tr-full rounded-br-full text-white flex justify-center items-center bg-[rgb(255,62,65)]">
-                      <a href="#transportAbout">Read More</a>
+                      <a href="#about">Read More</a>
                     </div>
                   </div>
                 </div>

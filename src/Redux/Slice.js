@@ -7,6 +7,7 @@ const logisticSlice = createSlice({
         transportServicesTop: 1,
         transportAboutTop: 1,
         transportExploreTop: 1,
+        transportClientsTop: 0,
         transportContactTop: 1,
     },
     reducers: {
@@ -22,11 +23,14 @@ const logisticSlice = createSlice({
         transportExplore: (state, action) => {
             state.transportExploreTop = action.payload
         },
+        transportClients: (state, action) => {
+            state.transportClientsTop = action.payload
+        },
         transportContact: (state, action) => {
             state.transportContactTop = action.payload
         }
     }
 })
 
-export const {transportHome,transportServices,transportAbout,transportExplore,transportContact} = logisticSlice.actions
+export const {transportHome,transportServices,transportAbout,transportExplore,transportClients,transportContact} = logisticSlice.actions
 export default logisticSlice.reducer

@@ -10,6 +10,7 @@ const Navbar = () => {
     transportServicesTop,
     transportAboutTop,
     transportExploreTop,
+    transportClientsTop,
     transportContactTop
   } = useSelector(state => state.logistic)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -31,6 +32,10 @@ const Navbar = () => {
 
     if (transportExploreTop < window.innerHeight) {
       setactiveLink('explore')
+    }
+
+    if (transportClientsTop < window.innerHeight) {
+      setactiveLink('clients')
     }
 
     if (transportContactTop < window.innerHeight) {
@@ -80,93 +85,93 @@ const Navbar = () => {
     }
   }, [checkSidebar])
 
-//   console.log(transportHomeTop, 'transportHomeTop')
-//   console.log(transportContactTop, 'transposrtContactTop')
+  //   console.log(transportHomeTop, 'transportHomeTop')
+  //   console.log(transportContactTop, 'transposrtContactTop')
   console.log(activeLink)
 
   return (
     <>
       <div
-        className={`w-full h-[80px] bg-white z-20 ${
-          isScrolled ? 'customShadow' : ''
-        } fixed top-0 left-0 flex justify-between items-center pr-3 md:px-9`}
+        className={`w-full h-[60px] bg-[rgb(31,66,93)] z-20 flex justify-between items-center pr-3 md:px-[100px] sticky top-[80px] left-0`}
       >
         <div className='flex items-center'>
-          <div className='logosAnimation w-[80px] sm:w-[80px]'>
-            <a href='/'>
-              <img
-                className='w-full h-full cursor-pointer'
-                src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/logoTransport_gwchby.png"
-                alt=''
-              />
+          <div className='w-[40px] h-[40px] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='watsapp'>
+            <a href="https://wa.me/+923454014436" target="_blank" rel="noopener noreferrer">
+              <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857807/watsapp_pyr5pq.png" alt="" />
             </a>
+          </div>
+          <div className='w-[40px] h-[40px] ml-[] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='instagram'>
+            <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/linkedin_egzsvk.png" alt="" />
+          </div>
+          <a href="https://www.facebook.com/p/Al-Hamd-General-Engineering-Services-Lahore-100065319076543/">
+            <div className='w-[40px] h-[40px] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='facebook'>
+              <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/facebook_oozfbi.png" alt="" />
+            </div>
+          </a>
+          <div className='w-[35px] h-[35px] ml-1 cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='linkedin'>
+            <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/instagram_ygvf9t.png" alt="" />
           </div>
         </div>
 
         <ul className='w-[450px] justify-between hidden md:flex'>
           <li
             onClick={() => setactiveLink('home')}
-            className={`cursor-pointer hover:text-red-500 duration-500 ${
-              activeLink == 'home' ? 'text-red-500' : ''
-            } px-2 py-[6px] group rounded`}
+            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
           >
-            <a href='#transportHome'>Home</a>
+            <a href='#home'>Home</a>
             <div
-              className={`w-0 h-[2px] ${
-                activeLink == 'home' ? 'w-full' : 'w-0'
-              } group-hover:w-full duration-700 bg-red-500`}
+              className={`w-0 h-[4px] ${activeLink == 'home' ? 'w-full' : 'w-0'
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
             ></div>
           </li>
           <li
             onClick={() => setactiveLink('services')}
-            className={`cursor-pointer hover:text-red-500 duration-500 ${
-              activeLink == 'services' ? 'text-red-500' : ''
-            } px-2 py-[6px] group rounded`}
+            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
           >
-            <a href='#transportServices'>Services</a>
+            <a href='#services'>Services</a>
             <div
-              className={`w-0 h-[2px] ${
-                activeLink == 'services' ? 'w-full' : 'w-0'
-              } group-hover:w-full duration-700 bg-red-500`}
+              className={`w-0 h-[4px] ${activeLink == 'services' ? 'w-full' : 'w-0'
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
             ></div>
           </li>
           <li
             onClick={() => setactiveLink('about')}
-            className={`cursor-pointer hover:text-red-500 duration-500 ${
-              activeLink == 'about' ? 'text-red-500' : ''
-            } px-2 py-[6px] group rounded`}
+            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
           >
-            <a href='#transportAbout'>About</a>
+            <a href='#about'>About</a>
             <div
-              className={`w-0 h-[2px] ${
-                activeLink == 'about' ? 'w-full' : 'w-0'
-              } group-hover:w-full duration-700 bg-red-500`}
+              className={`w-0 h-[4px] ${activeLink == 'about' ? 'w-full' : 'w-0'
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
             ></div>
           </li>
           <li
             onClick={() => setactiveLink('explore')}
-            className={`cursor-pointer hover:text-red-500 duration-500 ${
-              activeLink == 'explore' ? 'text-red-500' : ''
-            } px-2 py-[6px] group rounded`}
+            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
           >
-            <a href='#transportExplore'>Explore</a>
+            <a href='#explore'>Explore</a>
             <div
-              className={`w-0 h-[2px] ${
-                activeLink == 'explore' ? 'w-full' : 'w-0'
-              } group-hover:w-full duration-700 bg-red-500`}
+              className={`w-0 h-[4px] ${activeLink == 'explore' ? 'w-full' : 'w-0'
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
+            ></div>
+          </li>
+          <li
+            onClick={() => setactiveLink('clients')}
+            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
+          >
+            <a href='#clients'>Clients</a>
+            <div
+              className={`w-0 h-[4px] ${activeLink == 'clients' ? 'w-full' : 'w-0'
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
             ></div>
           </li>
           <li
             onClick={() => setactiveLink('contact')}
-            className={`cursor-pointer hover:text-red-500 duration-500 ${
-              activeLink == 'contact' ? 'text-red-500' : ''
-            } px-2 py-[6px] group rounded`}
+            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
           >
-            <a href='#transportContact'>Contact</a>
+            <a href='#contact'>Contact</a>
             <div
-              className={`w-0 h-[2px] ${
-                activeLink == 'contact' ? 'w-full' : 'w-0'
-              } group-hover:w-full duration-700 bg-red-500`}
+              className={`w-0 h-[4px] ${activeLink == 'contact' ? 'w-full' : 'w-0'
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
             ></div>
           </li>
         </ul>
@@ -178,11 +183,15 @@ const Navbar = () => {
         </div>
       </div>
 
+
+
+
+      {/* ------------------------------Sidebar-------------------------------- */}
+
       <div
         onClick={handleOverlay}
-        className={`overlay w-full h-screen z-20 bg-[rgba(0,0,0,0.6)] ${
-          checkSidebar ? 'visible' : 'invisible'
-        } fixed top-0 left-0 cursor-crosshair`}
+        className={`overlay w-full h-screen z-20 bg-[rgba(0,0,0,0.6)] ${checkSidebar ? 'visible' : 'invisible'
+          } fixed top-0 left-0 cursor-crosshair`}
       >
         <div className='w-[280px] sm:w-[300px] h-screen bg-[rgb(249,250,251)] absolute top-0 right-0 cursor-auto'>
           <div
@@ -196,9 +205,8 @@ const Navbar = () => {
           <ul className='px-1 mt-3'>
             <li
               onClick={handleCross}
-              className={`flex items-center mt-1 ${
-                activeLink === 'home' ? 'bg-[rgb(255,208,6)] text-black' : ''
-              } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+              className={`flex items-center mt-1 ${activeLink === 'home' ? 'bg-[rgb(255,208,6)] text-black' : ''
+                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
             >
               <a href='#transportHome' className='flex items-center text-black w-full'>
                 Home
@@ -206,11 +214,10 @@ const Navbar = () => {
             </li>
             <li
               onClick={handleCross}
-              className={`flex items-center mt-1 ${
-                activeLink === 'services'
-                  ? 'bg-[rgb(255,208,6)] text-black'
-                  : ''
-              } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+              className={`flex items-center mt-1 ${activeLink === 'services'
+                ? 'bg-[rgb(255,208,6)] text-black'
+                : ''
+                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
             >
               <a href='#transportServices' className='flex items-center text-black w-full'>
                 Services
@@ -218,9 +225,8 @@ const Navbar = () => {
             </li>
             <li
               onClick={handleCross}
-              className={`flex items-center mt-1 ${
-                activeLink === 'about' ? 'bg-[rgb(255,208,6)] text-black' : ''
-              } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+              className={`flex items-center mt-1 ${activeLink === 'about' ? 'bg-[rgb(255,208,6)] text-black' : ''
+                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
             >
               <a href='#transportAbout' className='flex items-center text-black w-full'>
                 About Us
@@ -228,11 +234,10 @@ const Navbar = () => {
             </li>
             <li
               onClick={handleCross}
-              className={`flex items-center mt-1 ${
-                activeLink === 'explore'
-                  ? 'bg-[rgb(255,208,6)] text-black'
-                  : ''
-              } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+              className={`flex items-center mt-1 ${activeLink === 'explore'
+                ? 'bg-[rgb(255,208,6)] text-black'
+                : ''
+                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
             >
               <a href='#transportExplore' className='flex items-center text-black w-full'>
                 Explore Us
@@ -240,11 +245,10 @@ const Navbar = () => {
             </li>
             <li
               onClick={handleCross}
-              className={`flex items-center mt-1 ${
-                activeLink === 'contact'
-                  ? 'bg-[rgb(255,208,6)] text-black'
-                  : ''
-              } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+              className={`flex items-center mt-1 ${activeLink === 'contact'
+                ? 'bg-[rgb(255,208,6)] text-black'
+                : ''
+                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
             >
               <a href='#transportExplore' className='flex items-center text-black w-full'>
                 Contact Us

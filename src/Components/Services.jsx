@@ -26,7 +26,8 @@ const Services = () => {
   }, []);
 
   useEffect(() => {
-    if(window.innerWidth >= 1024){
+    const mediaQuery = window.matchMedia("(min-width: 1024px)"); 
+    if(mediaQuery.matches){
     gsap.fromTo(
       card1.current,
       { x: "-300%" }, // Start from the left side (offscreen)
@@ -126,7 +127,7 @@ const Services = () => {
   const array = [
     {
       image:"https://res.cloudinary.com/djpvajewe/image/upload/v1732857808/service1_kb69xn.png",
-      name: "Full Truckload",
+      name: "Transportation",
       description:"Full Truckload or Full Container Load shipment services Outbound from Lahore, Karachi & Islamabad at market rates.",
       reference:card1,
       x:"-300%",
@@ -135,7 +136,7 @@ const Services = () => {
     },
     {
       image:"https://res.cloudinary.com/djpvajewe/image/upload/v1732857808/service2_oedr5v.png",
-      name: "Loose Cargo",
+      name: "Warehousing",
       description:"Door to Door Loose Cargo Transportation on weight or volume basis at competitive rates, with great care, between Lahore and Karachi.",
       reference:card2,
       x:"-300%",
@@ -144,7 +145,7 @@ const Services = () => {
     },
     {
       image:"https://res.cloudinary.com/djpvajewe/image/upload/v1732857808/service3_rhl8qd.png",
-      name: "Load Matching",
+      name: "Supply Chain Management",
       description:"We Match LCL Cargo at affordable rates on long hual, book your sizeable load/cargo in sharing mode (LCL) in 17ft or 20Ft containers, Safety guaranteed.",
       reference:card3,
       x:"-300%",
@@ -153,7 +154,7 @@ const Services = () => {
     },
     {
       image:"https://res.cloudinary.com/djpvajewe/image/upload/v1732857808/service4_vdjumt.png",
-      name: "Car Carrier",
+      name: "Cold Chain Logistics",
       description:"Ship your car between Lahore, Karachi, Faisalabad,Peshawar and Islamabad at market competitive rates through our wide network of trusted partners.",
       reference:card4,
       x:"300%",
@@ -162,7 +163,7 @@ const Services = () => {
     },
     {
       image:"https://res.cloudinary.com/djpvajewe/image/upload/v1732857808/service5_kemr3k.png",
-      name: "Premium Towing",
+      name: "Vehicle Fleet Management",
       description:"Specialized 20Ft Containerized Towing Service to move your Premium SUV's and Sports Cars with full safety between Lahore, Karachi and Islamabad.",
       reference:card5,
       x:"300%",
@@ -172,7 +173,7 @@ const Services = () => {
     {
       image:
         "https://res.cloudinary.com/djpvajewe/image/upload/v1732857808/service6_bm3iyk.png",
-      name: "Tow Truck",
+      name: "Heavy Equipment Transport",
       description:"Mobilize a Tow Truck in Lahore, Islamabad and Karachi within minutes to service your borken down vehicle.",
       reference:card6,
       x:"300%",
@@ -210,7 +211,7 @@ const Services = () => {
         id="services"
         className="w-full min-h-screen py-9 overflow-hidden"
       >
-        <h1 className="text-center text-3xl font-[600]">Our Services</h1>
+        <h1 className="text-center text-xl sm:text-3xl font-[600]">Our Services</h1>
         <div className="w-[100px] mx-auto h-[4px] mt-3 bg-red-500"></div>
 
         {/* --------------------------Grid-------------------------------- */}

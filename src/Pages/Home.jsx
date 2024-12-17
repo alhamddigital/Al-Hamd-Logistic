@@ -15,6 +15,7 @@ const Home = () => {
         <Services/>
         <Calculation/>
         <About/>
+        {/* <Map/> */}
         <Explore/>
         <Clients/>
         <Contact/>

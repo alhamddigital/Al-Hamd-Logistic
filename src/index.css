@@ -34,7 +34,7 @@ html {
       rgb(114, 133, 176, 0.7),
       rgb(141, 148, 165, 0.7)
     ),
-    url("https://vectorglobe.com/wp-content/uploads/2024/06/What-is-the-Difference-Between-Logistics-and-Transportation-1536x786.jpg");
+    url("https://res.cloudinary.com/djpvajewe/image/upload/v1733469584/storage_warehouse_fvpc4h.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,7 +45,7 @@ html {
 }
 
 .contactSection{
-  background-image: linear-gradient(rgb(66,61,143,0.8), rgb(66,61,143,0.8)), url('https://as2.ftcdn.net/v2/jpg/01/81/65/85/1000_F_181658575_6gz3Gx96iRndmBtXv2llVsGOGsfdT1AP.jpg');
+  background-image: linear-gradient(rgb(66,61,143,0.8), rgb(66,61,143,0.8)), url('https://res.cloudinary.com/djpvajewe/image/upload/v1733722143/IMG_20241205_125053_luhixg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

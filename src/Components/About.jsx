@@ -19,38 +19,40 @@ const About = () => {
     }, [])
 
     useEffect(() => {
+        const mediaQuery = window.matchMedia("(min-width: 1024px)");
+        if (mediaQuery.matches) {
 
-        
-        gsap.fromTo(left.current,
-            { x: '-100%' },
-            {
-                x: '0%',
-                scrollTrigger: {
-                    trigger: left.current,
-                    start: 'top 90%',
-                    end: 'top 40%',
-                    scrub: 1,
-                    toggleActions: 'play none none reverse',
-                    once: false,
-                },
-            }
-        );
+            gsap.fromTo(left.current,
+                { x: '-100%' },
+                {
+                    x: '0%',
+                    scrollTrigger: {
+                        trigger: left.current,
+                        start: 'top 90%',
+                        end: 'top 40%',
+                        scrub: 1,
+                        toggleActions: 'play none none reverse',
+                        once: false,
+                    },
+                }
+            );
 
-        gsap.fromTo(right.current,
-            { x: '100%' }, 
-            {
-                x: '0%', 
-                scrollTrigger: {
-                    trigger: right.current,
-                    start: 'top 90%', 
-                    end: 'top 40%', 
-                    scrub: 1,
-                    toggleActions: 'play none none reverse',
-                    once: false,
-                },
-            }
-        );
-    }, []);
+            gsap.fromTo(right.current,
+                { x: '100%' },
+                {
+                    x: '0%',
+                    scrollTrigger: {
+                        trigger: right.current,
+                        start: 'top 90%',
+                        end: 'top 40%',
+                        scrub: 1,
+                        toggleActions: 'play none none reverse',
+                        once: false,
+                    },
+                }
+            );
+        }
+        }, []);
 
     return (
         <>
@@ -68,11 +70,11 @@ const About = () => {
                                 <h1 className='text-white text-xl text-center mt-2'>Years Experience</h1>
                             </div>
                         </div>
-                    </div> 
+                    </div>
 
                     <div ref={right} className='customShadow rounded-xl p-4'>
-                        <h1 className='text-[rgb(0,29,103)] text-3xl md:text-4xl lg:text-6xl font-[600]'>CONNECTING AIR, ROADS AND SEAS</h1>
-                        <p className='text-[rgb(36,75,117)] mt-3 md:mt-5 text-2xl font-[100]'>Vehicles traveling on these networks may include automobiles, buses, trains, trucks</p>
+                        <h1 className='text-[rgb(0,29,103)] text-3xl md:text-4xl lg:text-[45px] font-[600] leading-loos'>OPTIMIZING SPACE, SAFETY AND EFFICIENCY</h1>
+                        <p className='text-[rgb(36,75,117)] mt-3 md:mt-5 text-2xl font-[500]'>Efficient Storage, Seamless Handling, Secure Management, Supporting Diverse Goods and Operations</p>
 
                         <div className='mt-5'>
                             <h1 className='text-[rgb(255,94,20)] text-2xl font-[600]'>Our Mission</h1>
