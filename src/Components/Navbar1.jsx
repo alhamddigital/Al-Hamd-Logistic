@@ -7,9 +7,6 @@ import { FiMenu } from "react-icons/fi";
 
 const Navbar1 = () => {
     const [checkMenu, setCheckMenu] = useState(false)
-    const handleMenu = () => {
-        setCheckMenu(!checkMenu)
-    }
 
     useEffect(() => {
         if (checkMenu) {
@@ -23,7 +20,7 @@ const Navbar1 = () => {
     }, [checkMenu]);
 
     return (
-        <div className='w-full flex justify-between items-center py-[6px] md:px-[20px] pl-1 pr-2 lg:px-[100px] sticky top-0 left-0 bg-white z-10'>
+        <div className='w-full hidden md:flex justify-between items-center py-[6px] md:px-[25px] pl-1 pr-2 lg:px-[100px] sticky top-0 left-0 bg-white z-20'>
 
             <div className='flex items-center'>
 
@@ -33,7 +30,7 @@ const Navbar1 = () => {
                     </a>
                 </div>
 
-                <h1 className='hidden sm:block sm:text-3xl sm:ml-5 font-[600] text-[rgb(226,31,47)] text-nowrap'>Al Hamd Logistics</h1>
+                <h1 className='hidden sm:block sm:text-2xl lg:3xl sm:ml-5 font-[600] text-[rgb(226,31,47)] text-nowrap'>Al Hamd Logistics</h1>
             </div>
 
             <div className='flex hidden md:flex'>
@@ -50,15 +47,9 @@ const Navbar1 = () => {
                 <div className='ml-5'>
                     <div className='text-[rgb(226,31,47)]'><MdEmail /></div>
                     <p className='mt-1'>Email Us</p>
-                    <p>alhamddigitalservices@gmail.com</p>
+                    <p>@gmail.com</p>
                 </div>
             </div>
-
-            <div onClick={handleMenu} className='text-3xl block md:hidden cursor-pointer'>
-                <FiMenu />
-            </div>
-
-            {/* {checkMenu && <Sidebar setCheckMenu={setCheckMenu} />} */}
 
         </div>
     )

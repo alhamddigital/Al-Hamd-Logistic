@@ -7,7 +7,7 @@ import { transportExplore } from "../Redux/Slice";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Explore = () => {
+const Service = () => {
   const dispatch = useDispatch();
   const card1 = useRef();
   const card2 = useRef();
@@ -185,7 +185,7 @@ const Explore = () => {
     <>
       <div
         ref={exploreRef}
-        id="explore"
+        id="services"
         className="w-full min-h-screen py-9 lg:py-[50px] bg-[rgb(245,245,245)] overflow-hidden"
       >
         <h1 className="text-3xl font-[400] text-center">Our Services</h1>
@@ -228,4 +228,4 @@ const Explore = () => {
   );
 };
 
-export default Explore;
+export default Service;

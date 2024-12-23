@@ -4,7 +4,7 @@ import { HiOutlineBars3 } from 'react-icons/hi2'
 import { useSelector } from 'react-redux'
 import { RxCross2 } from 'react-icons/rx'
 
-const Navbar = () => {
+const Navbar2 = () => {
   const {
     transportHomeTop,
     transportServicesTop,
@@ -76,25 +76,33 @@ const Navbar = () => {
     setSidebar(false)
   }
 
-  useEffect(() => {
-    if (checkSidebar) {
-      document.body.style.overflow = 'hidden'
-    }
-    {
-      document.body.style.overflow = 'auto'
-    }
-  }, [checkSidebar])
+ useEffect(()=>{
+  if(checkSidebar == "true"){
+    document.body.style.overflow="hidden"
+  }
+  else{
+    document.body.style.overflow="auto"
+  }
+ },[checkSidebar])
 
-  //   console.log(transportHomeTop, 'transportHomeTop')
-  //   console.log(transportContactTop, 'transposrtContactTop')
-  console.log(activeLink)
+  // console.log(checkSidebar,"checksidebar")
 
   return (
     <>
       <div
-        className={`w-full h-[60px] bg-[rgb(31,66,93)] z-20 flex justify-between items-center pr-3 md:px-[100px] sticky top-[80px] left-0`}
+        className={`w-full h-[60px] bg-white md:bg-[rgb(31,66,93)] z-20 flex justify-between items-center pr-3 md:px-[40px] lg:px-[100px] sticky top-0 md:top-[80px] left-0`}
       >
-        <div className='flex items-center'>
+
+        <div className='flex items-center block md:hidden'>
+          <div className='w-[70px] cursor-pointer'>
+            <a href="/">
+              <img className='w-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/logoTransport_gwchby.png" alt="" />
+            </a>
+          </div>
+          <h1 className='hidden sm:block sm:text-2xl lg:3xl sm:ml-5 font-[600] text-[rgb(226,31,47)] text-nowrap'>Al Hamd Logistics</h1>
+        </div>
+
+        <div className='flex items-center hidden md:flex'>
           <div className='w-[40px] h-[40px] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='watsapp'>
             <a href="https://wa.me/+923454014436" target="_blank" rel="noopener noreferrer">
               <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857807/watsapp_pyr5pq.png" alt="" />
@@ -103,7 +111,7 @@ const Navbar = () => {
           <div className='w-[40px] h-[40px] ml-[] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='instagram'>
             <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/linkedin_egzsvk.png" alt="" />
           </div>
-          <a href="https://www.facebook.com/p/Al-Hamd-General-Engineering-Services-Lahore-100065319076543/">
+          <a target='_blank' href="https://www.facebook.com/p/Al-Hamd-General-Engineering-Services-Lahore-100065319076543/">
             <div className='w-[40px] h-[40px] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='facebook'>
               <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/facebook_oozfbi.png" alt="" />
             </div>
@@ -118,7 +126,7 @@ const Navbar = () => {
             onClick={() => setactiveLink('home')}
             className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
           >
-            <a href='#home'>Home</a>
+            <a href='/'>Home</a>
             <div
               className={`w-0 h-[4px] ${activeLink == 'home' ? 'w-full' : 'w-0'
                 } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
@@ -145,12 +153,12 @@ const Navbar = () => {
             ></div>
           </li>
           <li
-            onClick={() => setactiveLink('explore')}
+            onClick={() => setactiveLink('gallery')}
             className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
           >
-            <a href='#explore'>Explore</a>
+            <a href='/gallery'>Gallery</a>
             <div
-              className={`w-0 h-[4px] ${activeLink == 'explore' ? 'w-full' : 'w-0'
+              className={`w-0 h-[4px] ${activeLink == 'gallery' ? 'w-full' : 'w-0'
                 } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
             ></div>
           </li>
@@ -200,7 +208,7 @@ const Navbar = () => {
           >
             <RxCross2 />
           </div>
-          <h1 className='ml-2 text-xl mt-4'>Al Hamd Transport</h1>
+          <h1 className='ml-2 text-xl mt-4'>Al Hamd Logistics</h1>
 
           <ul className='px-1 mt-3'>
             <li
@@ -261,4 +269,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar2

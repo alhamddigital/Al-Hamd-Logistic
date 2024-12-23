@@ -3,20 +3,21 @@ import HeroSection from '../Components/HeroSection'
 import Services from '../Components/Services'
 import Calculation from '../Components/Calculation'
 import About from '../Components/About'
-import Explore from '../Components/Explore'
+import Explore from '../Components/Service'
 import Contact from '../Components/Contact'
 import Footer from '../Components/Footer'
 import Clients from '../Components/Clients'
+import News from '../Components/News'
 
 const Home = () => {
   return (
     <>
         <HeroSection/>
-        <Services/>
+        <Explore/>
+        {/* <Services/> */}
         <Calculation/>
         <About/>
-        {/* <Map/> */}
-        <Explore/>
+        <News/>
         <Clients/>
         <Contact/>
         <Footer/>
