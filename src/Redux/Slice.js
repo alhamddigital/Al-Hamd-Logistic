@@ -3,25 +3,26 @@ import { createSlice } from "@reduxjs/toolkit";
 const logisticSlice = createSlice({
     name: "logistic",
     initialState: {
-        transportHomeTop: 1,
-        transportServicesTop: 1,
-        transportAboutTop: 1,
-        transportExploreTop: 1,
+        transportHomeTop:0,
+        transportServiceTop:0,
+        transportAboutTop: 0,
+        transportExploreTop: 0,
+        logisticsNewsTop:0,
         transportClientsTop: 0,
-        transportContactTop: 1,
+        transportContactTop: 0,
     },
     reducers: {
         transportHome: (state, action) => {
             state.transportHomeTop = action.payload
         },
-        transportServices: (state, action) => {
-            state.transportServicesTop = action.payload
+        transportService: (state, action) => {
+            state.transportServiceTop = action.payload
         },
         transportAbout: (state, action) => {
             state.transportAboutTop = action.payload
         },
-        transportExplore: (state, action) => {
-            state.transportExploreTop = action.payload
+        logisticsNews: (state, action) => {
+            state.logisticsNewsTop = action.payload
         },
         transportClients: (state, action) => {
             state.transportClientsTop = action.payload
@@ -32,5 +33,5 @@ const logisticSlice = createSlice({
     }
 })
 
-export const {transportHome,transportServices,transportAbout,transportExplore,transportClients,transportContact} = logisticSlice.actions
+export const {transportHome,transportService,transportAbout,logisticsNews,transportClients,transportContact} = logisticSlice.actions
 export default logisticSlice.reducer

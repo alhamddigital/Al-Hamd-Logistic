@@ -7,9 +7,9 @@ import { RxCross2 } from 'react-icons/rx'
 const Navbar2 = () => {
   const {
     transportHomeTop,
-    transportServicesTop,
+    transportServiceTop,
     transportAboutTop,
-    transportExploreTop,
+    logisticsNewsTop,
     transportClientsTop,
     transportContactTop
   } = useSelector(state => state.logistic)
@@ -22,7 +22,7 @@ const Navbar2 = () => {
       setactiveLink('home')
     }
 
-    if (transportServicesTop < window.innerHeight) {
+    if (transportServiceTop < window.innerHeight) {
       setactiveLink('services')
     }
 
@@ -30,8 +30,8 @@ const Navbar2 = () => {
       setactiveLink('about')
     }
 
-    if (transportExploreTop < window.innerHeight) {
-      setactiveLink('explore')
+    if (logisticsNewsTop < window.innerHeight) {
+      setactiveLink('news')
     }
 
     if (transportClientsTop < window.innerHeight) {
@@ -43,9 +43,8 @@ const Navbar2 = () => {
     }
   }, [
     transportHomeTop,
-    transportServicesTop,
+    transportServiceTop,
     transportAboutTop,
-    transportExploreTop,
     transportContactTop
   ])
 
@@ -85,12 +84,12 @@ const Navbar2 = () => {
   }
  },[checkSidebar])
 
-  // console.log(checkSidebar,"checksidebar")
-
+// console.log(transportServiceTop,"transportServiceTop")
+ console.log(activeLink,"activeLink")
   return (
     <>
       <div
-        className={`w-full h-[60px] bg-white md:bg-[rgb(31,66,93)] z-20 flex justify-between items-center pr-3 md:px-[40px] lg:px-[100px] sticky top-0 md:top-[80px] left-0`}
+        className={`w-full h-[60px] bg-white md:bg-[rgb(31,66,93)] z-20 flex justify-between items-center pr-3 md:px-[40px] lg:px-[100px] sticky top-0 md:top-[100px] left-0`}
       >
 
         <div className='flex items-center block md:hidden'>
@@ -122,65 +121,54 @@ const Navbar2 = () => {
         </div>
 
         <ul className='w-[450px] justify-between hidden md:flex'>
-          <li
-            onClick={() => setactiveLink('home')}
-            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
-          >
+
+          <li onClick={() => setactiveLink('home')} className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}>
             <a href='/'>Home</a>
             <div
               className={`w-0 h-[4px] ${activeLink == 'home' ? 'w-full' : 'w-0'
-                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
-            ></div>
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}></div>
           </li>
-          <li
-            onClick={() => setactiveLink('services')}
-            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
-          >
+
+          <li onClick={() => setactiveLink('services')} className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}>
             <a href='#services'>Services</a>
             <div
               className={`w-0 h-[4px] ${activeLink == 'services' ? 'w-full' : 'w-0'
-                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
-            ></div>
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}></div>
           </li>
-          <li
-            onClick={() => setactiveLink('about')}
-            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
-          >
+
+          <li onClick={() => setactiveLink('about')} className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}>
             <a href='#about'>About</a>
             <div
               className={`w-0 h-[4px] ${activeLink == 'about' ? 'w-full' : 'w-0'
-                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
-            ></div>
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}></div>
           </li>
-          <li
-            onClick={() => setactiveLink('gallery')}
-            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
-          >
+
+          <li onClick={() => setactiveLink('gallery')} className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}>
             <a href='/gallery'>Gallery</a>
             <div
               className={`w-0 h-[4px] ${activeLink == 'gallery' ? 'w-full' : 'w-0'
-                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
-            ></div>
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}></div>
           </li>
-          <li
-            onClick={() => setactiveLink('clients')}
-            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
-          >
+
+          <li onClick={() => setactiveLink('news')} className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}>
+            <a href='#news'>News</a>
+            <div
+              className={`w-0 h-[4px] ${activeLink == 'news' ? 'w-full' : 'w-0'
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}></div>
+          </li>
+
+          <li onClick={() => setactiveLink('clients')} className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}>
             <a href='#clients'>Clients</a>
             <div
               className={`w-0 h-[4px] ${activeLink == 'clients' ? 'w-full' : 'w-0'
-                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
-            ></div>
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}></div>
           </li>
-          <li
-            onClick={() => setactiveLink('contact')}
-            className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}
-          >
+
+          <li onClick={() => setactiveLink('contact')} className={`cursor-pointer duration-500 text-white py-[6px] group rounded relative`}>
             <a href='#contact'>Contact</a>
             <div
               className={`w-0 h-[4px] ${activeLink == 'contact' ? 'w-full' : 'w-0'
-                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}
-            ></div>
+                } group-hover:w-full duration-700 bg-red-500 absolute top-9 left-0`}></div>
           </li>
         </ul>
         <div
@@ -201,64 +189,82 @@ const Navbar2 = () => {
         className={`overlay w-full h-screen z-20 bg-[rgba(0,0,0,0.6)] ${checkSidebar ? 'visible' : 'invisible'
           } fixed top-0 left-0 cursor-crosshair`}
       >
-        <div className='w-[280px] sm:w-[300px] h-screen bg-[rgb(249,250,251)] absolute top-0 right-0 cursor-auto'>
+        <div className='w-[280px] sm:w-[300px] h-screen bg-[rgb(31,66,93)] absolute top-0 right-0 cursor-auto'>
           <div
             onClick={handleCross}
-            className='w-[35px] h-[35px] absolute top-2 right-2 rounded-full border-2 border-black text-black flex justify-center items-center text-2xl cursor-pointer hover:bg-black hover:text-white'
+            className='w-[35px] h-[35px] absolute top-2 right-2 rounded-full text-black flex justify-center items-center text-2xl cursor-pointer bg-white hover:bg-black hover:text-white'
           >
             <RxCross2 />
           </div>
-          <h1 className='ml-2 text-xl mt-4'>Al Hamd Logistics</h1>
+          <h1 className='ml-2 text-xl mt-4 text-white'>Al Hamd Logistics</h1>
 
           <ul className='px-1 mt-3'>
             <li
               onClick={handleCross}
-              className={`flex items-center mt-1 ${activeLink === 'home' ? 'bg-[rgb(255,208,6)] text-black' : ''
-                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+              className={`flex items-center mt-1 ${activeLink === 'home' ? 'bg-red-500 text-black' : ''
+                } cursor-pointer hover:bg-red-500 group p-1`}
             >
-              <a href='#transportHome' className='flex items-center text-black w-full'>
+              <a href='/' className='flex items-center text-white w-full'>
                 Home
               </a>
             </li>
             <li
               onClick={handleCross}
               className={`flex items-center mt-1 ${activeLink === 'services'
-                ? 'bg-[rgb(255,208,6)] text-black'
+                ? 'bg-red-500 text-black'
                 : ''
-                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+                } cursor-pointer hover:bg-red-500 group p-1`}
             >
-              <a href='#transportServices' className='flex items-center text-black w-full'>
+              <a href='#services' className='flex items-center text-white w-full'>
                 Services
               </a>
             </li>
             <li
               onClick={handleCross}
-              className={`flex items-center mt-1 ${activeLink === 'about' ? 'bg-[rgb(255,208,6)] text-black' : ''
-                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+              className={`flex items-center mt-1 ${activeLink === 'about' ? 'bg-red-500 text-black' : ''
+                } cursor-pointer hover:bg-red-500 group p-1`}
             >
-              <a href='#transportAbout' className='flex items-center text-black w-full'>
+              <a href='#about' className='flex items-center text-white w-full'>
                 About Us
               </a>
             </li>
             <li
               onClick={handleCross}
-              className={`flex items-center mt-1 ${activeLink === 'explore'
-                ? 'bg-[rgb(255,208,6)] text-black'
-                : ''
-                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+              className={`flex items-center mt-1 ${activeLink === 'gallery' ? 'bg-red-500 text-black' : ''
+                } cursor-pointer hover:bg-red-500 group p-1`}
             >
-              <a href='#transportExplore' className='flex items-center text-black w-full'>
-                Explore Us
+              <a href='/gallery' className='flex items-center text-white w-full'>
+                Gallery
+              </a>
+            </li>
+            <li
+              onClick={handleCross}
+              className={`flex items-center mt-1 ${activeLink === 'news' ? 'bg-red-500 text-black' : ''
+                } cursor-pointer hover:bg-red-500 group p-1`}
+            >
+              <a href='#news' className='flex items-center text-white w-full'>
+                News
+              </a>
+            </li>
+            <li
+              onClick={handleCross}
+              className={`flex items-center mt-1 ${activeLink === 'clients'
+                ? 'bg-red-500 text-black'
+                : ''
+                } cursor-pointer hover:bg-red-500 group p-1`}
+            >
+              <a href='#clients' className='flex items-center text-white w-full'>
+                Clients
               </a>
             </li>
             <li
               onClick={handleCross}
               className={`flex items-center mt-1 ${activeLink === 'contact'
-                ? 'bg-[rgb(255,208,6)] text-black'
+                ? 'bg-red-500 text-black'
                 : ''
-                } cursor-pointer hover:bg-[rgb(231,236,245)] group p-1`}
+                } cursor-pointer hover:bg-red-500 group p-1`}
             >
-              <a href='#transportExplore' className='flex items-center text-black w-full'>
+              <a href='#contact' className='flex items-center text-white w-full'>
                 Contact Us
               </a>
             </li>

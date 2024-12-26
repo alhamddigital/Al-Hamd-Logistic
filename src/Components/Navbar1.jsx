@@ -20,7 +20,7 @@ const Navbar1 = () => {
     }, [checkMenu]);
 
     return (
-        <div className='w-full hidden md:flex justify-between items-center py-[6px] md:px-[25px] pl-1 pr-2 lg:px-[100px] sticky top-0 left-0 bg-white z-20'>
+        <div className='w-full h-[100px] hidden md:flex justify-between items-center py-[6px] md:px-[25px] pl-1 pr-2 lg:px-[100px] sticky top-0 left-0 bg-white z-20'>
 
             <div className='flex items-center'>
 
@@ -33,21 +33,22 @@ const Navbar1 = () => {
                 <h1 className='hidden sm:block sm:text-2xl lg:3xl sm:ml-5 font-[600] text-[rgb(226,31,47)] text-nowrap'>Al Hamd Logistics</h1>
             </div>
 
-            <div className='flex hidden md:flex'>
+            <div className='flex hidden md:flex items-center'>
                 <div>
                     <div className='text-[rgb(226,31,47)]'><FaPhone /></div>
                     <p className='mt-1'>Call Us Anytime</p>
-                    <p>03219635875</p>
+                    <p>+923224326125</p>
                 </div>
                 <div className='ml-5'>
                     <div className='text-[rgb(226,31,47)]'><FiClock /></div>
                     <p className='mt-1'>Opening Time</p>
-                    <p>08:00 - 07:00</p>
+                    <p>09:00 - 06:00</p>
                 </div>
                 <div className='ml-5'>
                     <div className='text-[rgb(226,31,47)]'><MdEmail /></div>
                     <p className='mt-1'>Email Us</p>
-                    <p>@gmail.com</p>
+                    <p>ahl@alhamdges.com.pk</p>
+                    <p>wasimsalim@alhamdges.com.pk</p>
                 </div>
             </div>
 

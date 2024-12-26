@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useDispatch } from "react-redux";
-import { transportExplore } from "../Redux/Slice";
+import { transportService } from "../Redux/Slice";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,18 +16,18 @@ const Service = () => {
   const card5 = useRef();
   const card6 = useRef();
 
-  const exploreRef = useRef();
+  const serviceRef = useRef();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       dispatch(
-        transportExplore(exploreRef.current.getBoundingClientRect().top)
+        transportService(serviceRef.current.getBoundingClientRect().top)
       );
     });
   }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)"); 
+    const mediaQuery = window.matchMedia("(min-width: 768px)"); 
     if(mediaQuery.matches){
     gsap.fromTo(
       card1.current,
@@ -184,11 +184,11 @@ const Service = () => {
   return (
     <>
       <div
-        ref={exploreRef}
+        ref={serviceRef}
         id="services"
         className="w-full min-h-screen py-9 lg:py-[50px] bg-[rgb(245,245,245)] overflow-hidden"
       >
-        <h1 className="text-3xl font-[400] text-center">Our Services</h1>
+        <h1 className="text-3xl font-[500] text-center">Our Services</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 mt-5 lg:mt-9 lg:px-[90px] gap-9">
           {array.map((e, i) => {

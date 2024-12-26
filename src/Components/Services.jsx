@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useDispatch } from "react-redux";
-import { transportServices } from "../Redux/Slice";
+// import { transportServices } from "../Redux/Slice";
 
 gsap.registerPlugin(ScrollTrigger);
 
