@@ -7,22 +7,22 @@ const GalleryComp = () => {
 
   useEffect(() => {
     if (image != "") {
-      document.body.style.overflow="hidden"
-    }else{
-      document.body.style.overflow="auto"
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
     }
   }, [image])
 
-  const handleOverlay=(event)=>{
-    if(event.target.classList.contains("overlay")){
+  const handleOverlay = (event) => {
+    if (event.target.classList.contains("overlay")) {
       setImage("")
     }
   }
 
 
   const array = [
-    // warehouse2
 
+    // warehouse2
     "https://res.cloudinary.com/djpvajewe/image/upload/v1734422922/WhatsApp_Image_2024-12-17_at_11.27.30_wiawht.jpg",
     "https://res.cloudinary.com/djpvajewe/image/upload/v1733723249/forklist1_dlb0et.jpg",
     "https://res.cloudinary.com/djpvajewe/image/upload/v1733722147/IMG_20241205_133057_mqnbqp.jpg",
@@ -90,7 +90,7 @@ const GalleryComp = () => {
         image && (
           <div onClick={handleOverlay} className='overlay w-full flex justify-center items-center h-screen fixed top-0 left-0 z-30 cursor-crosshair bg-[rgb(0,0,0,0.8)]'>
             <div className='w-[90%] md:w-[80%] lg:w-[70%] lg:h-[85vh] relative cursor-auto'>
-              <div onClick={()=>setImage("")} className='w-[40px] h-[40px] hover:bg-black hover:text-white duration-300 text-xl absolute -right-4 -top-5 bg-white rounded-full flex justify-center items-center cursor-pointer'><RxCross1 /></div>
+              <div onClick={() => setImage("")} className='w-[40px] h-[40px] hover:bg-black hover:text-white duration-300 text-xl absolute -right-4 -top-5 bg-white rounded-full flex justify-center items-center cursor-pointer'><RxCross1 /></div>
               <img className='w-full h-full' src={image} alt="" />
             </div>
           </div>

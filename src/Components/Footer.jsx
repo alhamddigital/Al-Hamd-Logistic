@@ -21,7 +21,7 @@ const Footer = () => {
         };
     }, [isModalOpen]);
 
-    const handleOverlay=()=>{
+    const handleOverlay = () => {
         setIsModalOpen(false)
     }
 
@@ -38,15 +38,16 @@ const Footer = () => {
                     <div className=''>
                         <h1 className='text-white text-2xl font-[500]'>Get in Touch</h1>
                         <ul>
-                            <li className='text-white flex items-center cursor-pointer mt-5 transition-all hover:text-yellow-500 font-[400]'><MdEmail /> <h1 className='ml-3'>alhamd@alhamdges.com.pk</h1></li>
-                            <li className='text-white flex items-center cursor-pointer mt-2 transition-all hover:text-yellow-500 font-[400]'><FaPhoneAlt /> <h1 className='ml-3'>+92 322 4326125</h1></li>
+                            <li className='text-white flex items-center cursor-pointer mt-5 transition-all hover:text-yellow-500 font-[400]'><MdEmail /> <h1 className='ml-3'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahl@alhamdges.com.pk" target="_blank">ahl@alhamdges.com.pk</a></h1></li>
+                            <li className='text-white flex items-center cursor-pointer mt-2 transition-all hover:text-yellow-500 font-[400]'><MdEmail /> <h1 className='ml-3'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=wasimsalim@alhamdges.com.pk" target="_blank">wasimsalim@alhamdges.com.pk</a></h1></li>
+                            <li className='text-white flex items-center cursor-pointer mt-2 transition-all hover:text-yellow-500 font-[400]'><FaPhoneAlt /> <p className='ml-3'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=wasimsalim@alhamdges.com.pk" target="_blank">+923224326125</a></p></li>
                             <div onClick={openModal} className='text-white flex items-center cursor-pointer mt-2 transition-all hover:text-yellow-500 font-[400]'>
                                 <FaLocationDot />
-                                <h1 className='ml-3'>55-A Muhafiz Town Lahore Pakistan</h1>
+                                <p className='ml-3'>55-A Muhafiz Town Lahore Pakistan</p>
                             </div>
                         </ul>
                         {isModalOpen && (
-                            <div onClick={handleOverlay}  className="fixed w-full cursor-crosshair h-screen inset-0 bg-black z-30 bg-opacity-50 flex justify-center items-center">
+                            <div onClick={handleOverlay} className="fixed w-full cursor-crosshair h-screen inset-0 bg-black z-30 bg-opacity-50 flex justify-center items-center">
                                 <div className="w-[90%] h-[90vh] md:w-[80%] bg-white p-4 rounded-lg relative">
                                     <div onClick={closeModal} className='absolute -top-[1px] cursor-pointer right-3 text-3xl'>&times;</div>
                                     <h2 className="text-lg text-center font-bold">AL-HAMD</h2>
@@ -67,17 +68,21 @@ const Footer = () => {
                 <div className=''>
                     <h1 className='text-white font-[500] text-xl'>You can find us at</h1>
                     <div className='flex items-center mt-5'>
-                        <div className='w-[40px] h-[40px] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='watsapp'>
-                            <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857807/watsapp_pyr5pq.png" alt="" />
+                        <div className='w-[40px] h-[40px] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='WhatsApp'>
+                            <a
+                                href="https://wa.me/+923224326125"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857807/watsapp_pyr5pq.png" alt="WhatsApp" />
+                            </a>
                         </div>
                         <div className='w-[40px] h-[40px] ml-[] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='instagram'>
                             <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/linkedin_egzsvk.png" alt="" />
                         </div>
-                        <a href="https://www.facebook.com/p/Al-Hamd-General-Engineering-Services-Lahore-100065319076543/">
-                            <div className='w-[40px] h-[40px] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='facebook'>
-                                <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/facebook_oozfbi.png" alt="" />
-                            </div>
-                        </a>
+                        <div className='w-[40px] h-[40px] cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='facebook'>
+                            <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/facebook_oozfbi.png" alt="" />
+                        </div>
                         <div className='w-[35px] h-[35px] ml-1 cursor-pointer flex justify-center items-center overflow-hidden text-white text-2xl' title='linkedin'>
                             <img className='w-full h-full' src="https://res.cloudinary.com/djpvajewe/image/upload/v1732857806/instagram_ygvf9t.png" alt="" />
                         </div>
@@ -102,8 +107,3 @@ const Footer = () => {
 }
 
 export default Footer
-
-
-
-
-

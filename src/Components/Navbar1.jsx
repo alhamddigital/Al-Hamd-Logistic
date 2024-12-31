@@ -46,9 +46,8 @@ const Navbar1 = () => {
                 </div>
                 <div className='ml-5'>
                     <div className='text-[rgb(226,31,47)]'><MdEmail /></div>
-                    <p className='mt-1'>Email Us</p>
-                    <p>ahl@alhamdges.com.pk</p>
-                    <p>wasimsalim@alhamdges.com.pk</p>
+                    <p className='hover:text-red-500 transition duration-300'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahl@alhamdges.com.pk" target="_blank">ahl@alhamdges.com.pk</a></p>
+                    <p className='hover:text-red-500 transition duration-300'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=wasimsalim@alhamdges.com.pk" target="_blank">wasimsalim@alhamdges.com.pk</a></p>
                 </div>
             </div>
 

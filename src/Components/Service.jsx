@@ -26,115 +26,115 @@ const Service = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)"); 
-    if(mediaQuery.matches){
-    gsap.fromTo(
-      card1.current,
-      { x: "-120%", y: "100%" }, // Start from the left side (offscreen)
-      {
-        x: "0%",
-        y: "0%", // Move to its original position
-        scrollTrigger: {
-          trigger: card1.current, // Trigger for the animation
-          start: "top 140%", // When the top of the trigger hits 80% of the viewport
-          end: "top 130%", // When the top of the trigger hits 50% of the viewport
-          scrub: 1, // Smoothly animate based on scroll
-          toggleActions: "play none none reverse",
-          once: false,
-          markers: false,
-        },
-      }
-    );
-    gsap.fromTo(
-      card2.current,
-      { x: "-240%", y: "100%" }, // Start from the left side (offscreen)
-      {
-        x: "0%",
-        y: "0%", // Move to its original position
-        scrollTrigger: {
-          trigger: card2.current, // Trigger for the animation
-          start: "top 160%", // When the top of the trigger hits 80% of the viewport
-          end: "top 140%", // When the top of the trigger hits 50% of the viewport
-          scrub: 1, // Smoothly animate based on scroll
-          toggleActions: "play none none reverse",
-          once: false,
-          markers: false,
-        },
-      }
-    );
-    gsap.fromTo(
-      card3.current,
-      { x: "-360%", y: "100%" }, // Start from the left side (offscreen)
-      {
-        x: "0%",
-        y: "0%", // Move to its original position
-        scrollTrigger: {
-          trigger: card3.current, // Trigger for the animation
-          start: "top 180%", // When the top of the trigger hits 80% of the viewport
-          end: "top 150%", // When the top of the trigger hits 50% of the viewport
-          scrub: 1, // Smoothly animate based on scroll
-          toggleActions: "play none none reverse",
-          once: false,
-          markers: false,
-        },
-      }
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia("(min-width: 768px)"); 
+  //   if(mediaQuery.matches){
+  //   gsap.fromTo(
+  //     card1.current,
+  //     { x: "-120%", y: "100%" }, // Start from the left side (offscreen)
+  //     {
+  //       x: "0%",
+  //       y: "0%", // Move to its original position
+  //       scrollTrigger: {
+  //         trigger: card1.current, // Trigger for the animation
+  //         start: "top 140%", // When the top of the trigger hits 80% of the viewport
+  //         end: "top 130%", // When the top of the trigger hits 50% of the viewport
+  //         scrub: 1, // Smoothly animate based on scroll
+  //         toggleActions: "play none none reverse",
+  //         once: false,
+  //         markers: false,
+  //       },
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     card2.current,
+  //     { x: "-240%", y: "100%" }, // Start from the left side (offscreen)
+  //     {
+  //       x: "0%",
+  //       y: "0%", // Move to its original position
+  //       scrollTrigger: {
+  //         trigger: card2.current, // Trigger for the animation
+  //         start: "top 160%", // When the top of the trigger hits 80% of the viewport
+  //         end: "top 140%", // When the top of the trigger hits 50% of the viewport
+  //         scrub: 1, // Smoothly animate based on scroll
+  //         toggleActions: "play none none reverse",
+  //         once: false,
+  //         markers: false,
+  //       },
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     card3.current,
+  //     { x: "-360%", y: "100%" }, // Start from the left side (offscreen)
+  //     {
+  //       x: "0%",
+  //       y: "0%", // Move to its original position
+  //       scrollTrigger: {
+  //         trigger: card3.current, // Trigger for the animation
+  //         start: "top 180%", // When the top of the trigger hits 80% of the viewport
+  //         end: "top 150%", // When the top of the trigger hits 50% of the viewport
+  //         scrub: 1, // Smoothly animate based on scroll
+  //         toggleActions: "play none none reverse",
+  //         once: false,
+  //         markers: false,
+  //       },
+  //     }
     
-    );
+  //   );
 
-    gsap.fromTo(
-      card4.current,
-      { x: "460%", y: "100%" }, // Start from the left side (offscreen)
-      {
-        x: "0%",
-        y: "0%", // Move to its original position
-        scrollTrigger: {
-          trigger: card4.current, // Trigger for the animation
-          start: "top 190%", // When the top of the trigger hits 80% of the viewport
-          end: "top 100%", // When the top of the trigger hits 50% of the viewport
-          scrub: 1, // Smoothly animate based on scroll
-          toggleActions: "play none none reverse",
-          once: false,
-          markers: false,
-        },
-      }
-    );
-    gsap.fromTo(
-      card5.current,
-      { x: "340%", y: "100%" }, // Start from the left side (offscreen)
-      {
-        x: "0%",
-        y: "0%", // Move to its original position
-        scrollTrigger: {
-          trigger: card5.current, // Trigger for the animation
-          start: "top 170%", // When the top of the trigger hits 80% of the viewport
-          end: "top 100%", // When the top of the trigger hits 50% of the viewport
-          scrub: 1, // Smoothly animate based on scroll
-          toggleActions: "play none none reverse",
-          once: false,
-          markers: false,
-        },
-      }
-    );
-    gsap.fromTo(
-      card6.current,
-      { x: "200%", y: "100%" }, // Start from the left side (offscreen)
-      {
-        x: "0%",
-        y: "0%", // Move to its original position
-        scrollTrigger: {
-          trigger: card6.current, // Trigger for the animation
-          start: "top 150%", // When the top of the trigger hits 80% of the viewport
-          end: "top 100%", // When the top of the trigger hits 50% of the viewport
-          scrub: 1, // Smoothly animate based on scroll
-          toggleActions: "play none none reverse",
-          once: false,
-          markers: false,
-        },
-      }
-    );
-  }
-  }, []);
+  //   gsap.fromTo(
+  //     card4.current,
+  //     { x: "460%", y: "100%" }, // Start from the left side (offscreen)
+  //     {
+  //       x: "0%",
+  //       y: "0%", // Move to its original position
+  //       scrollTrigger: {
+  //         trigger: card4.current, // Trigger for the animation
+  //         start: "top 190%", // When the top of the trigger hits 80% of the viewport
+  //         end: "top 100%", // When the top of the trigger hits 50% of the viewport
+  //         scrub: 1, // Smoothly animate based on scroll
+  //         toggleActions: "play none none reverse",
+  //         once: false,
+  //         markers: false,
+  //       },
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     card5.current,
+  //     { x: "340%", y: "100%" }, // Start from the left side (offscreen)
+  //     {
+  //       x: "0%",
+  //       y: "0%", // Move to its original position
+  //       scrollTrigger: {
+  //         trigger: card5.current, // Trigger for the animation
+  //         start: "top 170%", // When the top of the trigger hits 80% of the viewport
+  //         end: "top 100%", // When the top of the trigger hits 50% of the viewport
+  //         scrub: 1, // Smoothly animate based on scroll
+  //         toggleActions: "play none none reverse",
+  //         once: false,
+  //         markers: false,
+  //       },
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     card6.current,
+  //     { x: "200%", y: "100%" }, // Start from the left side (offscreen)
+  //     {
+  //       x: "0%",
+  //       y: "0%", // Move to its original position
+  //       scrollTrigger: {
+  //         trigger: card6.current, // Trigger for the animation
+  //         start: "top 150%", // When the top of the trigger hits 80% of the viewport
+  //         end: "top 100%", // When the top of the trigger hits 50% of the viewport
+  //         scrub: 1, // Smoothly animate based on scroll
+  //         toggleActions: "play none none reverse",
+  //         once: false,
+  //         markers: false,
+  //       },
+  //     }
+  //   );
+  // }
+  // }, []);
 
   const array = [
     {

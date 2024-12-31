@@ -18,41 +18,41 @@ const About = () => {
         })
     }, [])
 
-    useEffect(() => {
-        const mediaQuery = window.matchMedia("(min-width: 1024px)");
-        if (mediaQuery.matches) {
+    // useEffect(() => {
+    //     const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    //     if (mediaQuery.matches) {
 
-            gsap.fromTo(left.current,
-                { x: '-100%' },
-                {
-                    x: '0%',
-                    scrollTrigger: {
-                        trigger: left.current,
-                        start: 'top 90%',
-                        end: 'top 40%',
-                        scrub: 1,
-                        toggleActions: 'play none none reverse',
-                        once: false,
-                    },
-                }
-            );
+    //         gsap.fromTo(left.current,
+    //             { x: '-100%' },
+    //             {
+    //                 x: '0%',
+    //                 scrollTrigger: {
+    //                     trigger: left.current,
+    //                     start: 'top 90%',
+    //                     end: 'top 40%',
+    //                     scrub: 1,
+    //                     toggleActions: 'play none none reverse',
+    //                     once: false,
+    //                 },
+    //             }
+    //         );
 
-            gsap.fromTo(right.current,
-                { x: '100%' },
-                {
-                    x: '0%',
-                    scrollTrigger: {
-                        trigger: right.current,
-                        start: 'top 90%',
-                        end: 'top 40%',
-                        scrub: 1,
-                        toggleActions: 'play none none reverse',
-                        once: false,
-                    },
-                }
-            );
-        }
-        }, []);
+    //         gsap.fromTo(right.current,
+    //             { x: '100%' },
+    //             {
+    //                 x: '0%',
+    //                 scrollTrigger: {
+    //                     trigger: right.current,
+    //                     start: 'top 90%',
+    //                     end: 'top 40%',
+    //                     scrub: 1,
+    //                     toggleActions: 'play none none reverse',
+    //                     once: false,
+    //                 },
+    //             }
+    //         );
+    //     }
+    //     }, []);
 
     return (
         <>
