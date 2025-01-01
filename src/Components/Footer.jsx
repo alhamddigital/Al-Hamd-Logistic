@@ -30,8 +30,8 @@ const Footer = () => {
             <div className='w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9'>
                 <div>
                     <h1 className='text-white text-3xl font-[700]'>Al Hamd</h1>
-                    <p className='text-white font-[400] mt-5'>
-                        Our aim is to become the leading company, delivering excellence and reliability in every service we provide, ensuring unmatched quality, customer satisfaction, and continuous improvement in all aspects of our business.
+                    <p className='text-white text-justify font-[400] mt-5'>
+                    At Al Hamd Logistics, our goal is to establish ourselves as the foremost provider in the supply chain and transport industry, delivering excellence and reliability in every aspect of our operations.
                     </p>
                 </div>
                 <div className='md:flex justify-center'>

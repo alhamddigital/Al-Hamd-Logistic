@@ -120,7 +120,7 @@ const Navbar2 = () => {
   return (
     <>
       <div
-        className={`w-full h-[60px] bg-white md:bg-[rgb(31,66,93)] z-20 flex justify-between items-center pr-3 md:px-[40px] lg:px-[100px] sticky top-0 md:top-[100px] left-0`}
+        className={`w-full h-[60px] bg-white md:bg-[rgb(31,66,93)] z-20 flex justify-between items-center pr-3 md:px-[40px] lg:px-[100px] sticky top-0 lg:top-[100px] left-0`}
       >
 
         <div className='flex items-center block md:hidden'>
@@ -175,6 +175,7 @@ const Navbar2 = () => {
         >
           <HiOutlineBars3 />
         </div>
+        
       </div>
 
 
