@@ -98,10 +98,6 @@ const Navbar2 = () => {
       path: "/#about"
     },
     {
-      list: "Gallery",
-      path: "/gallery"
-    },
-    {
       list: "News",
       path: "/#news"
     },
@@ -112,6 +108,10 @@ const Navbar2 = () => {
     {
       list: "Contact",
       path: "/#contact"
+    },
+    {
+      list: "Gallery",
+      path: "/gallery"
     },
   ]
 
