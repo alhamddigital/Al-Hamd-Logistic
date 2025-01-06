@@ -88,6 +88,16 @@ const GalleryComp = () => {
         "https://res.cloudinary.com/djpvajewe/image/upload/v1734422924/WhatsApp_Image_2024-12-17_at_12.03.59_1_jckllz.jpg",
         "https://res.cloudinary.com/djpvajewe/image/upload/v1734422924/WhatsApp_Image_2024-12-17_at_12.03.59_2_rajuml.jpg",
         "https://res.cloudinary.com/djpvajewe/image/upload/v1734422923/WhatsApp_Image_2024-12-17_at_12.03.58_gl1qpr.jpg",
+
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157354/ribbon2_zzsxve.jpg",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157352/dua1_ihwezs.jpg",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157352/dua3_ovlb7f.jpg",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157352/dua2_ctepm8.jpg",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157352/869A8DC8-BA51-4D94-9A3B-AB0E2986BECD_v9kq27.png",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157356/ribbon2_jd7rgb.png",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157357/sitting1_bpmvvw.jpg",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157357/shutter1_f21jnt.png",
+        "https://res.cloudinary.com/djpvajewe/image/upload/v1736157358/sitting2_nukzij.jpg"
   ];
 
   return (

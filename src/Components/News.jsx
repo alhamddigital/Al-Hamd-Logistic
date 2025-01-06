@@ -57,32 +57,17 @@ const News = () => {
 
     const array = [
         {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZWySN6qL3sS9OwjTm5UjYnHiqzZqAU_WjFw&s",
+            image: "https://res.cloudinary.com/djpvajewe/image/upload/v1736157354/ribbon2_zzsxve.jpg",
             heading1: "Grand Opening of Yusen Logistics",
             description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
         },
         {
-            image: "https://www.wha-group.com/Uploads/elFinder/news_activity/companynews/2023/09/wha-group-wha-mega-logistics-km-23.jpg",
+            image: "https://res.cloudinary.com/djpvajewe/image/upload/v1736157352/869A8DC8-BA51-4D94-9A3B-AB0E2986BECD_v9kq27.png",
             heading1: "WHA Group Holds Stone Laying Ceremony ",
             description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
         },
         {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwZYHwGYkcfDJ0tngZ1QAJbvft787mqx6irA&s",
-            heading1: "Institute of Transport and Logistics",
-            description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
-        },
-        {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZWySN6qL3sS9OwjTm5UjYnHiqzZqAU_WjFw&s",
-            heading1: "Grand Opening of Yusen Logistics",
-            description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
-        },
-        {
-            image: "https://www.wha-group.com/Uploads/elFinder/news_activity/companynews/2023/09/wha-group-wha-mega-logistics-km-23.jpg",
-            heading1: "WHA Group Holds Stone Laying Ceremony ",
-            description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
-        },
-        {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwZYHwGYkcfDJ0tngZ1QAJbvft787mqx6irA&s",
+            image: "https://res.cloudinary.com/djpvajewe/image/upload/v1736157357/shutter1_f21jnt.png",
             heading1: "Institute of Transport and Logistics",
             description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
         }
