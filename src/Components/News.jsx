@@ -6,8 +6,8 @@ import { useDispatch } from 'react-redux';
 import { logisticsNews } from '../Redux/Slice';
 
 const News = () => {
-    const dispatch=useDispatch()
-    const newsRef=useRef()
+    const dispatch = useDispatch()
+    const newsRef = useRef()
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -18,11 +18,12 @@ const News = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 1500,
+        speed: 2500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay:true,
         pauseOnHover: false,
+        autoplaySpeed:5000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -58,19 +59,20 @@ const News = () => {
     const array = [
         {
             image: "https://res.cloudinary.com/djpvajewe/image/upload/v1736157354/ribbon2_zzsxve.jpg",
-            heading1: "Grand Opening of Yusen Logistics",
+            heading1: "Grand Opening of Al Hamd Logistics",
             description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
         },
         {
             image: "https://res.cloudinary.com/djpvajewe/image/upload/v1736157352/869A8DC8-BA51-4D94-9A3B-AB0E2986BECD_v9kq27.png",
-            heading1: "WHA Group Holds Stone Laying Ceremony ",
-            description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
-        },
+            heading1: "MD-Hilton Pharma Celebrates Visit to Al Hamd Logistics",
+            description: "The impactful visit of MD-Hilton Pharma to Al Hamd Logistics, highlighting a commitment to innovation, operational excellence, and strengthening industry partnerships."
+        },       
         {
             image: "https://res.cloudinary.com/djpvajewe/image/upload/v1736157357/shutter1_f21jnt.png",
-            heading1: "Institute of Transport and Logistics",
-            description: "Discover the highlights of our logistics ceremony celebrating innovation and excellence. Stay informed about industry advancements and network insights shaping the future of supply chain management",
+            heading1: "Maersk Team Visit Al Hamd Logistics",
+            description: "Explore the key moments of the Maersk team's visit to Al Hamd Logistics, highlighting collaboration, innovation, and shared insights shaping the future of supply chain excellence."
         }
+
     ]
     return (
         <div ref={newsRef} id='news' className="w-full min-h-screen bg-[rgb(31,66,93)] px-3 py-9 sm:px-[40px] md:px-[40px] lg:px-[100px] sm:py-[60px]">
@@ -84,7 +86,7 @@ const News = () => {
                             return (
                                 <>
                                     <div className='px-2 md:px-9 flex justify-center items-center flex-col'>
-                                        <div className='w-[300px] h-[190px] lg:w-[400px] lg:h-[300px]'>
+                                        <div className='w-[290px] h-[190px] lg:w-[400px] lg:h-[300px]'>
                                             <img className='w-full h-full' src={e.image} alt="" />
                                         </div>
                                         <h1 className='text-white self-start text-xl font-[600] mt-5'>{e.heading1}</h1>

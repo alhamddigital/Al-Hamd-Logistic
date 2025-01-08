@@ -76,7 +76,7 @@ const Navbar2 = () => {
   }
 
   useEffect(() => {
-    if (checkSidebar == "true") {
+    if (checkSidebar === true) {
       document.body.style.overflow = "hidden"
     }
     else {

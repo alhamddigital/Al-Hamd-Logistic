@@ -73,7 +73,7 @@ const About = () => {
                     </div>
 
                     <div ref={right} className='customShadow rounded-xl p-4'>
-                        <h1 className='text-[rgb(0,29,103)] text-3xl md:text-4xl lg:text-[45px] font-[600] leading-loos'>OPTIMIZING SPACE, SAFETY AND EFFICIENCY</h1>
+                        <h1 className='text-[rgb(0,29,103)] text-3xl md:text-4xl lg:text-[45px] font-[600] about-heading'>OPTIMIZING SPACE, SAFETY AND EFFICIENCY</h1>
                         <p className='text-[rgb(36,75,117)] mt-3 md:mt-5 text-2xl font-[500]'>Efficient Storage, Seamless Handling, Secure Management, Supporting Diverse Goods and Operations</p>
 
                         <div className='mt-5'>
