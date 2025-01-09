@@ -20,7 +20,7 @@ const Navbar1 = () => {
     }, [checkMenu]);
 
     return (
-        <div className='w-full h-[100px] hidden lg:flex justify-between items-center py-[6px] md:px-[25px] pl-1 pr-2 lg:px-[100px] sticky top-0 left-0 bg-white z-20'>
+        <div className='w-full h-[80px] hidden md:flex justify-between items-center py-[6px] md:px-[25px] pl-1 pr-2 lg:px-[60px] sticky top-0 left-0 bg-white z-20'>
 
             <div className='flex items-center'>
 
@@ -30,10 +30,10 @@ const Navbar1 = () => {
                     </a>
                 </div>
 
-                <h1 className='hidden sm:block sm:text-2xl lg:3xl sm:ml-5 font-[600] text-[rgb(226,31,47)] text-nowrap'>Al Hamd Logistics</h1>
+                <h1 className='hidden lg:block sm:text-2xl lg:3xl sm:ml-5 font-[600] text-[rgb(226,31,47)] text-nowrap'>Al Hamd Logistics</h1>
             </div>
 
-            <div className='flex hidden lg:flex items-center'>
+            <div className='flex hidden md:flex items-center'>
 
                 <div className='flex items-center'>
                     <div className='text-[rgb(226,31,47)] text-xl'><FaPhone /></div>

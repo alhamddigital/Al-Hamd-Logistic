@@ -40,7 +40,7 @@ const Footer = () => {
                         <ul>
                             <li className='text-white flex items-center cursor-pointer mt-5 transition-all hover:text-yellow-500 font-[400]'><MdEmail /> <h1 className='ml-3'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahl@alhamdges.com.pk" target="_blank">ahl@alhamdges.com.pk</a></h1></li>
                             <li className='text-white flex items-center cursor-pointer mt-2 transition-all hover:text-yellow-500 font-[400]'><MdEmail /> <h1 className='ml-3'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=wasimsalim@alhamdges.com.pk" target="_blank">wasimsalim@alhamdges.com.pk</a></h1></li>
-                            <li className='text-white flex items-center cursor-pointer mt-2 transition-all hover:text-yellow-500 font-[400]'><FaPhoneAlt /> <p className='ml-3'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=wasimsalim@alhamdges.com.pk" target="_blank">+923224326125</a></p></li>
+                            <li className='text-white flex items-center mt-2 transition-all hover:text-yellow-500 font-[400]'><FaPhoneAlt /> <p className='ml-3'>+923224326125</p></li>
                             <div onClick={openModal} className='text-white flex items-center cursor-pointer mt-2 transition-all hover:text-yellow-500 font-[400]'>
                                 <FaLocationDot />
                                 <p className='ml-3'>55-A Muhafiz Town Lahore Pakistan</p>

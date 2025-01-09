@@ -61,13 +61,15 @@ const About = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-[60px] mt-5 lg:mt-9'>
 
-                    <div ref={left} className='w-full md:h-[590px] relative'>
-                        <img className='w-full h-full' src="https://pluginspoint.com/geoport/wp-content/uploads/2020/03/s_about_img.jpg" alt="" />
-                        <div className='absolute bottom-9 right-9'>
-                            <img src="https://pluginspoint.com/geoport/wp-content/uploads/2020/03/about_exp_bg.png" alt="" />
-                            <div className='w-full h-full absolute top-0 left-0 flex justify-center items-center flex-col'>
-                                <h1 className='text-white text-5xl font-[700] text-center'>10</h1>
-                                <h1 className='text-white text-xl text-center mt-2'>Years Experience</h1>
+                    <div className='flex justify-center items-center'>
+                        <div ref={left} className='w-full lg:h-[490px] relative'>
+                            <img className='w-full h-full' src="https://pluginspoint.com/geoport/wp-content/uploads/2020/03/s_about_img.jpg" alt="" />
+                            <div className='absolute bottom-9 right-9'>
+                                <img src="https://pluginspoint.com/geoport/wp-content/uploads/2020/03/about_exp_bg.png" alt="" />
+                                <div className='w-full h-full absolute top-0 left-0 flex justify-center items-center flex-col'>
+                                    <h1 className='text-white text-5xl font-[700] text-center'>10</h1>
+                                    <h1 className='text-white text-xl text-center mt-2'>Years Experience</h1>
+                                </div>
                             </div>
                         </div>
                     </div>

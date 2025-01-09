@@ -75,7 +75,7 @@ const News = () => {
 
     ]
     return (
-        <div ref={newsRef} id='news' className="w-full min-h-screen bg-[rgb(31,66,93)] px-3 py-9 sm:px-[40px] md:px-[40px] lg:px-[100px] sm:py-[60px]">
+        <div ref={newsRef} id='news' className="w-full lg:min-h-screen bg-[rgb(31,66,93)] py-9 sm:px-[20px] md:px-[40px] lg:px-[100px] sm:py-[60px]">
             <h1 className="text-center text-white text-2xl sm:text-4xl font-semibold">
                 News & Insights
             </h1>
@@ -85,8 +85,8 @@ const News = () => {
                         array.map((e, i) => {
                             return (
                                 <>
-                                    <div className='px-2 md:px-9 flex justify-center items-center flex-col'>
-                                        <div className='w-[290px] h-[190px] lg:w-[400px] lg:h-[300px]'>
+                                    <div className='px-3 md:px-5 flex justify-center items-center flex-col'>
+                                        <div className='w-full h-[190px] lg:h-[300px]'>
                                             <img className='w-full h-full' src={e.image} alt="" />
                                         </div>
                                         <h1 className='text-white self-start text-xl font-[600] mt-5'>{e.heading1}</h1>

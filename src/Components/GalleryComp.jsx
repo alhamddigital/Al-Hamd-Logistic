@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RxCross1 } from "react-icons/rx";
 
 const GalleryComp = () => {
@@ -9,6 +9,14 @@ const GalleryComp = () => {
       setImage("");
     }
   };
+
+  useEffect(()=>{
+    if(image != ""){
+      document.body.style.overflow="hidden"
+    }else{
+      document.body.style.overflow="auto"
+    }
+  },[image])
 
   const array = [
     "https://res.cloudinary.com/djpvajewe/image/upload/v1733723249/forklist1_dlb0et.jpg",
@@ -64,7 +72,6 @@ const GalleryComp = () => {
     "https://res.cloudinary.com/djpvajewe/image/upload/v1736157356/ribbon2_jd7rgb.png",
     "https://res.cloudinary.com/djpvajewe/image/upload/v1736157357/sitting1_bpmvvw.jpg",
     "https://res.cloudinary.com/djpvajewe/image/upload/v1736157357/shutter1_f21jnt.png",
-    "https://res.cloudinary.com/djpvajewe/image/upload/v1736157358/sitting2_nukzij.jpg"
 ];
 
   return (
@@ -74,13 +81,16 @@ const GalleryComp = () => {
           <div
             onClick={() => setImage(url)}
             key={index}
-            className="w-full h-[300px] sm:h-[400px] cursor-pointer"
+            className="w-full h-[300px] sm:h-[400px] cursor-pointer relative group"
           >
             <img
               className="w-full h-full object-cover"
               src={url} // Directly use the URL here
               alt=""
             />
+            <div className='w-full h-full absolute top-0 left-0 bg-[rgb(0,0,0,0.7)] scale-[0] group-hover:scale-[1] transition-all duration-700 invisible group-hover:visible cursor-crosshair flex justify-center items-center'>
+                <div className='w-[80px] h-[80px] cursor-pointer bg-red-500 duration-300 rounded-full text-white flex justify-center items-center font-[600] hover:bg-blue-500'>View</div>
+            </div>
           </div>
         ))}
       </div>
