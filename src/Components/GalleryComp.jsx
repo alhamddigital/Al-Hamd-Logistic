@@ -85,10 +85,10 @@ const GalleryComp = () => {
           >
             <img
               className="w-full h-full object-cover"
-              src={url} // Directly use the URL here
+              src={url}
               alt=""
             />
-            <div className='w-full h-full absolute top-0 left-0 bg-[rgb(0,0,0,0.7)] scale-[0] group-hover:scale-[1] transition-all duration-700 invisible group-hover:visible cursor-crosshair flex justify-center items-center'>
+            <div className='w-full h-full hidden lg:flex absolute top-0 left-0 bg-[rgb(0,0,0,0.7)] scale-[0] group-hover:scale-[1] transition-all duration-700 invisible group-hover:visible cursor-crosshair flex justify-center items-center'>
                 <div className='w-[80px] h-[80px] cursor-pointer bg-red-500 duration-300 rounded-full text-white flex justify-center items-center font-[600] hover:bg-blue-500'>View</div>
             </div>
           </div>

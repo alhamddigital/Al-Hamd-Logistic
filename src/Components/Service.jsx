@@ -1,20 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useDispatch } from "react-redux";
 import { transportService } from "../Redux/Slice";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Service = () => {
   const dispatch = useDispatch();
-  const card1 = useRef();
-  const card2 = useRef();
-  const card3 = useRef();
-  const card4 = useRef();
-  const card5 = useRef();
-  const card6 = useRef();
+
 
   const serviceRef = useRef();
 
@@ -26,158 +17,42 @@ const Service = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   const mediaQuery = window.matchMedia("(min-width: 768px)"); 
-  //   if(mediaQuery.matches){
-  //   gsap.fromTo(
-  //     card1.current,
-  //     { x: "-120%", y: "100%" }, // Start from the left side (offscreen)
-  //     {
-  //       x: "0%",
-  //       y: "0%", // Move to its original position
-  //       scrollTrigger: {
-  //         trigger: card1.current, // Trigger for the animation
-  //         start: "top 140%", // When the top of the trigger hits 80% of the viewport
-  //         end: "top 130%", // When the top of the trigger hits 50% of the viewport
-  //         scrub: 1, // Smoothly animate based on scroll
-  //         toggleActions: "play none none reverse",
-  //         once: false,
-  //         markers: false,
-  //       },
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     card2.current,
-  //     { x: "-240%", y: "100%" }, // Start from the left side (offscreen)
-  //     {
-  //       x: "0%",
-  //       y: "0%", // Move to its original position
-  //       scrollTrigger: {
-  //         trigger: card2.current, // Trigger for the animation
-  //         start: "top 160%", // When the top of the trigger hits 80% of the viewport
-  //         end: "top 140%", // When the top of the trigger hits 50% of the viewport
-  //         scrub: 1, // Smoothly animate based on scroll
-  //         toggleActions: "play none none reverse",
-  //         once: false,
-  //         markers: false,
-  //       },
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     card3.current,
-  //     { x: "-360%", y: "100%" }, // Start from the left side (offscreen)
-  //     {
-  //       x: "0%",
-  //       y: "0%", // Move to its original position
-  //       scrollTrigger: {
-  //         trigger: card3.current, // Trigger for the animation
-  //         start: "top 180%", // When the top of the trigger hits 80% of the viewport
-  //         end: "top 150%", // When the top of the trigger hits 50% of the viewport
-  //         scrub: 1, // Smoothly animate based on scroll
-  //         toggleActions: "play none none reverse",
-  //         once: false,
-  //         markers: false,
-  //       },
-  //     }
-    
-  //   );
-
-  //   gsap.fromTo(
-  //     card4.current,
-  //     { x: "460%", y: "100%" }, // Start from the left side (offscreen)
-  //     {
-  //       x: "0%",
-  //       y: "0%", // Move to its original position
-  //       scrollTrigger: {
-  //         trigger: card4.current, // Trigger for the animation
-  //         start: "top 190%", // When the top of the trigger hits 80% of the viewport
-  //         end: "top 100%", // When the top of the trigger hits 50% of the viewport
-  //         scrub: 1, // Smoothly animate based on scroll
-  //         toggleActions: "play none none reverse",
-  //         once: false,
-  //         markers: false,
-  //       },
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     card5.current,
-  //     { x: "340%", y: "100%" }, // Start from the left side (offscreen)
-  //     {
-  //       x: "0%",
-  //       y: "0%", // Move to its original position
-  //       scrollTrigger: {
-  //         trigger: card5.current, // Trigger for the animation
-  //         start: "top 170%", // When the top of the trigger hits 80% of the viewport
-  //         end: "top 100%", // When the top of the trigger hits 50% of the viewport
-  //         scrub: 1, // Smoothly animate based on scroll
-  //         toggleActions: "play none none reverse",
-  //         once: false,
-  //         markers: false,
-  //       },
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     card6.current,
-  //     { x: "200%", y: "100%" }, // Start from the left side (offscreen)
-  //     {
-  //       x: "0%",
-  //       y: "0%", // Move to its original position
-  //       scrollTrigger: {
-  //         trigger: card6.current, // Trigger for the animation
-  //         start: "top 150%", // When the top of the trigger hits 80% of the viewport
-  //         end: "top 100%", // When the top of the trigger hits 50% of the viewport
-  //         scrub: 1, // Smoothly animate based on scroll
-  //         toggleActions: "play none none reverse",
-  //         once: false,
-  //         markers: false,
-  //       },
-  //     }
-  //   );
-  // }
-  // }, []);
-
   const array = [
     {
       image:
         "https://res.cloudinary.com/djpvajewe/image/upload/v1733469584/storage_warehouse_fvpc4h.jpg",
       name: "Warehousing Services",
       description: "Optimized space utilization for efficient stock management, ensuring safety, organization, and maximum storage capacity..",
-      reference: card1,
     },
     {
       image:
         "https://www.shutterstock.com/image-photo/warehouseman-checking-delivery-stock-warehouse-260nw-2409869337.jpg",
       name: "Inventory Management",
       description: "Streamlined inventory control with real-time tracking, automated systems, stock audits, and optimized storage solutions.",
-      reference: card2,
     },
     {
       image:
         "https://res.cloudinary.com/djpvajewe/image/upload/v1733723249/forklist1_dlb0et.jpg",
       name: "Material Handling",
       description: "Efficient material movement using forklifts, cranes, conveyors, ensuring safety and productivity in operations.",
-      reference: card3,
     },
     {
       image:
       "https://res.cloudinary.com/djpvajewe/image/upload/v1734422922/WhatsApp_Image_2024-12-17_at_11.27.30_wiawht.jpg",
       name: "Transport Solutions",
       description: "Comprehensive transport solutions offering efficient, secure, and timely delivery for both domestic and international shipments",
-      reference: card4,
     },
     {
       image:
       "https://res.cloudinary.com/djpvajewe/image/upload/v1734422943/WhatsApp_Image_2024-12-17_at_12.04.21_fmuy44.jpg",
       name: "Security aur Monitoring",
       description: "24/7 security and monitoring with CCTV, access control, and advanced systems to protect inventory and assets",
-      reference: card5,
     },
     {
       image:
         "https://res.cloudinary.com/djpvajewe/image/upload/v1734423197/BEB14C12-7D0E-448B-9A04-5905847751EA_h82fsx.png",
       name: "Value-added Services",
       description: "Customized value-added services including labeling, packaging, assembly, and quality inspection to enhance product value and presentation",
-      reference: card6,
     },
   ];
 
@@ -194,7 +69,7 @@ const Service = () => {
           {array.map((e, i) => {
             return (
               <>
-                <div ref={e.reference} className="bg-white p-5 group">
+                <div className="bg-white p-5 group">
                   <div className="w-full h-[250px] overflow-hidden">
                     <img
                       className="w-full h-full object-cover group-hover:scale-110 duration-500"
